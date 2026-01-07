@@ -17,8 +17,8 @@ st.set_page_config(
 def load_models():
     """Load the trained models"""
     try:
-        model1 = joblib.load('model_india_net_rf.joblib')
-        model2 = joblib.load('model_worldwide_residual_rf.joblib')
+        model1 = joblib.load('models/model_india_net_rf.joblib')
+        model2 = joblib.load('models/model_worldwide_residual_rf.joblib')
         return model1, model2
     except FileNotFoundError as e:
         st.error(f"Model file not found: {e}")
